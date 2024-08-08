@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Weight Loss</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">MAG</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="meal-calculator.html" class="nav-link">Meal Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a href="daily-calorie-calculator.html" class="nav-link">Daily Calorie Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a href="signup.html" class="nav-link">Sign-Up</a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="alll" style="background: url(bg-2.jpeg);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;">
+    <main >
+      <section id="calculator-section">
+          <h2>Daily Calorie Calculator</h2>
+          <form id="calorie-form">
+              <label for="weight">Weight (kg):</label>
+              <input type="number" id="weight" min="50" max="150" required>
+              <label for="height">Height (cm):</label>
+              <input type="number" id="height" required>
+              <label for="age">Age:</label>
+              <input type="number" id="age" required>
+              <label for="activity-level">Activity Level:</label>
+              <select id="activity-level" required>
+                  <option value="1.2">Sedentary</option>
+                  <option value="1.375">Lightly active</option>
+                  <option value="1.55">Moderately active</option>
+                  <option value="1.725">Very active</option>
+                  <option value="1.9">Extra active</option>
+              </select>
+              <label for="weight-goal">Weight Goal:</label>
+              <select id="weight-goal" required>
+                  <option value="maintain">Maintain weight</option>
+                  <option value="lose">Lose weight</option>
+                  <option value="gain">Gain weight</option>
+              </select>
+              <label for="health-condition">Health Condition:</label>
+              <select id="health-condition">
+                  <option value="">None</option>
+                  <option value="diabetes">Diabetes</option>
+                  <option value="celiac">Celiac</option>
+                  <option value="hypertension">Hypertension</option>
+                  <option value="cholesterol">Cholesterol</option>
+                  <option value="lactose-intolerance">Lactose Intolerance</option>
+              </select>
+              <label for="water-intake">Water Intake (liters):</label>
+              <input type="number" step="0.1" id="water-intake" required>
+              <label for="exercise-time">Exercise Time (minutes):</label>
+              <input type="number" id="exercise-time" required>
+              <button type="button" onclick="calculateDailyCalories()">Calculate</button>
+          </form>
+          <div id="calorie-result"></div>
+          <div id="message-doctor" style="display: none;">
+              <!-- <button type="button" onclick="messageDoctor()">Message Doctor</button> -->
+               <a href="chat.html" target="_blank" style="background-color: #4CAF50; color: white;
+               border: none;
+               border-radius: 4px;
+               padding: 10px 20px;
+               font-size: 16px;
+               cursor: pointer;
+               ">Message Doctor with Gmail</a>
+          </div>
+          <div id="message-doctor-two" style="display: none; margin-top: 20px;">
+            <!-- <button type="button" onclick="messageDoctor()">Message Doctor</button> -->
+             <a href="chaat.html" target="_blank" style="background-color: #4CAF50; color: white;
+             border: none;
+             border-radius: 4px;
+             padding: 10px 20px;
+             font-size: 16px;
+             cursor: pointer;
+             ">Message Doctor in Website</a>
+        </div>
+          <div id="generate-diet-plan" style="display: none; margin-top: 20px;">
+              <button type="button" onclick="generateDietPlan()">Generate Diet Plan</button>
+          </div>
+          <div id="diet-plan"></div>
+      </section>
+  </main>
+
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Health and Weight Loss Website</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="daily-calorie-calculator.js"></script>
+</body>
+</html>
